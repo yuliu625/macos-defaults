@@ -1,0 +1,21 @@
+name: Shell Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  shell-check:
+    name: Shell Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Install shellcheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+      - name: Run shellcheck on shell scripts
+        run: |
+          find . -type f -name "*.zsh" -print0 | xargs -0 shellcheck
