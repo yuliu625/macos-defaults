@@ -40,6 +40,14 @@ BuildVersion:		25G83
 - Show apps pinned to the dock.
 - Scroll up on a Dock icon to show all Space's opened windows for an app, or open stack.
 
+### Screenshots (com.apple.screencapture)
+
+- Add a shadow to screenshots.
+- Include date and time in screenshot filenames.
+- Set default screenshot location to `~/Pictures/Screenshots`.
+- Display the thumbnail after taking a screenshot.
+- The generated image is a png.
+
 
 ## References
 
